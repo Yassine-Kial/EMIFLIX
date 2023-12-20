@@ -1,0 +1,24 @@
+<div class="search-controlls-container">
+    <div class="search-input-container">
+        <input class="search-input" type="search" id="search" #searchInput7 name="q"
+            placeholder="Enter your search query" required>
+    </div>
+    <div class="search-button-container">
+<button class="search-button7" (click)="search7(searchInput7.value)">SEARCH</button>
+    </div>
+</div>
+
+
+
+
+<div class="movies-container">
+    <div *ngFor="let movie of movies; let i = index" class="movie">
+        <div class="movie-thumbnail">
+            <a [routerLink]="['/movie', movie.id]" routerLinkActive="active">
+                <img *ngIf="movie.thumbnail" [src]="movie.thumbnail" alt="">            </a>
+        </div>
+        <div class="movie-title">
+            <p>{{movie.name}}</p>
+        </div>
+    </div>
+</div>

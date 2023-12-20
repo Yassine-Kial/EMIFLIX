@@ -1,0 +1,14 @@
+<div class="container">
+<div class="movie-card" *ngFor="let movie of movies">
+    <div class="movie-thumbnail-container">
+        <img class="movie-thumbnail" src={{movie.image}} alt="">
+    </div>
+    <div class="movie-details">
+        <div class="movie-title">{{movie.title}}</div>
+        <div class="movie-more">
+            <div class="movie-year-minute">{{movie.year}} &#x2022; {{movie.time}}m</div>
+            <div class="movie-type">{{movie.type}}</div>
+        </div>
+    </div>
+</div>
+</div>

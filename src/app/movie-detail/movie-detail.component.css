@@ -1,0 +1,43 @@
+.title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.stats {
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.description {
+    color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        width: 600px;
+}
+
+.rating {
+color: #a3a3a3;
+        font-size: 16px;
+        font-weight: 400;    
+}
+
+.highlight {
+    color: white;
+}
+
+
+.detail-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+
+
