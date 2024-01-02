@@ -1,10 +1,18 @@
 <div class="header">
     <div class="logo-container">
+                <a routerLink="">
         <img class="filmflexlogo" src="../../assets/EMIFLIX.png" alt="jfhzk"/>
+                </a>
     </div>
     <div class="buttons-container">
-        <a routerLink="">
-                    <button class="watch-button">WATCH NOW</button>
+
+                <button *ngIf="isUserLoggedIn()" class="search-button" (click)="logout()"> LOG OUT</button>
+
+        <a routerLink="favorites">
+                                <button *ngIf="isUserLoggedIn()" class="watch-button">FAVORITES</button>
+                                <button (click)="signIn()" *ngIf="!isUserLoggedIn()" class="watch-button">Sign In</button>
+
+
         </a>
         <a routerLink="search">
                     <button class="search-button">SEARCH</button>

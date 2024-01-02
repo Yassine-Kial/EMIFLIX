@@ -30,7 +30,8 @@ export class SearchComponent {
         this.movies = data.results.map((movie: any) => ({
         name: movie.title,
         thumbnail: `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`,
-        id : movie.id,
+          id: movie.id,
+          image: movie.backdrop_path,
       }));
       },
       (error) => {

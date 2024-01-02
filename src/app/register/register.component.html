@@ -1,0 +1,27 @@
+<div class="container">
+
+
+<img class="bgImage" src="../../assets/emiflixbgImage.jpg" alt="">
+<form class="form" (ngSubmit)="register()" [formGroup]="checkoutForm">
+
+            <p class="signin">Sign Up</p>
+
+        <label for="firstName">
+            First name
+        </label>
+        <input type="text" name="firstName" formControlName="firstName">
+
+        <label for="lastName">
+            Last name
+        </label>
+        <input type="text" name="lastName" formControlName="lastName">
+        <label for="email">
+            Email
+        </label>
+        <input type="text" name="email" formControlName="email">
+        <label for="password">Password</label>
+        <input type="password" name="password" formControlName="password">
+        <button class="login-button" type="submit">Sign Up</button>
+                <p class="registerText">Already a user? <a class="link" routerLink="/login">Back to Sign in</a></p>
+</form>
+</div>

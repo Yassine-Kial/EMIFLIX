@@ -1,9 +1,65 @@
 <div class="detail-container">
 <img class="thumbnail-detail" [src]="movieDetails.thumbnail" alt="">
-    <div class="details">
-        <p class="title">{{movieDetails.name}}</p>
-        <p class="stats"> {{movieDetails.releaseDate}} | {{movieDetails.originalLanguage}}</p>
-        <p class="description">{{movieDetails.description}}</p>
-        <p class="rating">rating : <span class="highlight">{{movieDetails.rating}}/10</span></p>
+
+    <div class="right-section">
+
+        <div class="details">
+            <p class="title">{{movieDetails.name}}</p>
+            <p class="stats"> {{movieDetails.releaseDate}} | {{movieDetails.originalLanguage}}</p>
+            <p class="description">{{movieDetails.description}}</p>
+            <p class="rating">rating : <span class="highlight">{{movieDetails.rating}}/10</span></p>
+        </div>
+
+        <button class="addFav" (click)="addFavoriteMovie()">ADD TO FAVORITES</button>
+        
+
     </div>
+
+
+
+  
+
+</div>
+
+<app-movie-slider [movies]="recommendedMovies" genre="Recommended Movies"></app-movie-slider>
+
+
+
+
+
+
+
+<div class="commentSection">
+
+<p class="commentNumber">{{numberOfComments}} commentaires</p>
+
+
+<form class="commentaire" (ngSubmit)="onSubmit()" [formGroup]="checkoutForm">
+    <div class="upper-commentaire">
+        <div class="profile-pic">
+            <p class="profile-pic-letter">{{userInfo.firstName.charAt(0).toUpperCase()}}</p>
+        </div>
+        <div class="profile-details">
+            <input class="addComment" type="text" placeholder="Add a comment ..." formControlName="comment"
+                (focus)="onInputFocus()">
+        </div>
+    </div>
+    <div class="commentaire-control">
+        <div class="rating-comment">rating</div>
+        <div class="button-control">
+            <button class="cancelButton">Cancel</button>
+            <button class="addButton" type="submit">Add new comment</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+<div *ngFor="let comment of movieComments">
+
+    <app-comment [profileLetter]="comment.firstName.charAt(0).toUpperCase()" [firstName]=comment.firstName
+        [lastName]=comment.lastName [date]="comment.email" [commentaire]="comment.comment" like="5"></app-comment>
+</div>
+
 </div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <p class="title">Movies</p>
+    <p class="description">Movies move us like nothing else can, whether they’re scary, funny, dramatic, romantic or anywhere in-between. So many
+    titles, so much to experience.</p>
+    <app-movie-slider [movies]="crimeMovies" genre="Crime Movies"></app-movie-slider>
+    <app-movie-slider [movies]="historyMovies" genre="History Movies"></app-movie-slider>
+    <app-movie-slider [movies]="romanceMovies" genre="Romance Movies"></app-movie-slider>
+    <app-movie-slider [movies]="actionMovies" genre="Action Movies"></app-movie-slider>
+    <app-movie-slider [movies]="scienceFictionMovies" genre="SCI-FI Movies"></app-movie-slider>
+    <app-movie-slider [movies]="comedyMovies" genre="Comedy Movies"></app-movie-slider>
+
+    <img class="blur" src="../../assets/blury.png" alt="">
+
+    <div class="footer">
+        
+
+        <div class="button-container">
+            <p class="footer-title">There’s even more to watch.</p>
+            
+            
+            <p class="footer-description">Emiflix has an extensive library of feature films, documentaries, TV shows, anime,
+                award-winning Netflix originals, and
+                more. Watch as much as you want, anytime you want.</p>
+                    <button (click)="joinNow()" class="footer-button">JOIN NOW</button>
+
+
+        </div>
+    </div>
+
+
+</div>

@@ -3,14 +3,11 @@
     font-size: 24px;
     font-weight: 500;
 }
-
-
 .stats {
     color: #a3a3a3;
     font-size: 14px;
     font-weight: 400;
 }
-
 .description {
     color: #fff;
         font-size: 16px;
@@ -18,26 +15,173 @@
         line-height: 22px;
         width: 600px;
 }
-
 .rating {
 color: #a3a3a3;
         font-size: 16px;
         font-weight: 400;    
 }
-
 .highlight {
     color: white;
 }
-
-
 .detail-container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
 }
 
-.details {
-    margin-left: 20px;
+.right-section {
+    display: flex;
+    flex-direction: column;
+        margin-left: 20px;
+}
+
+
+.addFav {
+    border: 1px solid #f40612;
+        color: white;
+        background-color: #f40612;
+        padding-top: 9px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 9px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 1px;
+        transition: opacity 1s;
+        margin-right: 20px;
+        margin-bottom: 100px;
+}
+
+input {
+    color: white;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-width: 2px;
+    border-radius: 5px;
+    margin-left: 0px;
 }
 
 
 
+
+
+
+.addComment {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #9aa0a6;
+    outline: none;
+    padding-left: 0px;
+    padding-bottom: 3px;
+    border-radius: 0px;
+    width: 500px;
+}
+
+
+
+.addComment:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+
+
+.addComment:focus+.commentaire-control .button-control .addButton #add {
+    background-color: #f40612;
+}
+
+
+.commentaire-control {
+    display: flex;
+    flex-direction: row;
+    padding-left: 55px;
+    justify-content: space-between;
+    width: 500px;
+
+}
+
+.cancelButton {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cancelButton:hover {
+    background-color: #424242;
+}
+
+.addButton {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #717171;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.commentaire {
+    margin-bottom: 50px;
+    width: 600px;
+
+}
+
+.profile-pic {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-pic-letter {
+    color: white;
+    font-weight: 600;
+}
+
+.upper-commentaire {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.profile-details {
+    margin-left: 5px;
+    padding-top: 0px;
+}
+
+
+.commentNumber {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.commentSection {
+    padding-left: 20px;
+}

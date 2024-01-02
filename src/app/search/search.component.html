@@ -7,18 +7,20 @@
 <button class="search-button7" (click)="search7(searchInput7.value)">SEARCH</button>
     </div>
 </div>
-
-
-
-
 <div class="movies-container">
-    <div *ngFor="let movie of movies; let i = index" class="movie">
-        <div class="movie-thumbnail">
-            <a [routerLink]="['/movie', movie.id]" routerLinkActive="active">
-                <img *ngIf="movie.thumbnail" [src]="movie.thumbnail" alt="">            </a>
+    <div *ngFor="let movie of movies;" class="movie">
+        <div *ngIf="movie.image">
+
+            <div class="movie-thumbnail">
+                <a [routerLink]="['/movie', movie.id]" routerLinkActive="active">
+                    <img [src]="movie.thumbnail" alt=""> </a>
+            </div>
+            <div class="movie-title">
+                <p>{{movie.name}}</p>
+            </div>
+
+
         </div>
-        <div class="movie-title">
-            <p>{{movie.name}}</p>
-        </div>
+        
     </div>
 </div>

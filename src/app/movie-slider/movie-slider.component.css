@@ -1,6 +1,7 @@
 .movie {
     display: inline-block;
     cursor: pointer;
+    margin-right: 20px;
 }
 .movie-thumbnail:hover {
     scale: 1.03;
@@ -19,11 +20,26 @@
     font-size: 15px;
 }
 
-.slider {
-    overflow: hidden;
+.movie-title-content {
+    text-align: center;
 }
 
-.movies-container {
-    display: flex;
+
+.scroll-wrapper {
+    overflow-x: auto;
     white-space: nowrap;
+    margin-bottom: 40px;
+
+    margin-left: 0px;
+    padding-left: 0px;
+        scrollbar-color: #f40612 gray;
+                /* "thin" or "auto" */
+            /* thumb color, track color */
+}
+
+.slider-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 7px;
 }
