@@ -1,16 +1,11 @@
 
 <p class="slider-title">{{genre}}</p>
-
 <div class="scroll-wrapper">
-
-
 <div class="movies-container">
-
-
         <div *ngFor="let movie of movies; let i = index" class="movie">
             <div *ngIf="movie.name.length<50">
             <div class="movie-thumbnail">
-                <a [routerLink]="['movie/',movie.id]" routerLinkActive="active">
+                <a [routerLink]="['/movie',movie.id]" routerLinkActive="active">
                     <img [src]="movie.thumbnail" alt="">
                 </a>
             </div>
@@ -19,16 +14,5 @@
             </div>
             </div>
         </div>
-
-
-
-
         </div>
-
-
-
-   
-
-
-
 </div>

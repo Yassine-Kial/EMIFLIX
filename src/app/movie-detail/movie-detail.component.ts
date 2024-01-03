@@ -47,17 +47,20 @@ export class MovieDetailComponent {
   }
   ngOnInit() {
 
-     this.authService.getUserInfo().subscribe(
+
+    if (this.authService.isLoggedIn()) {
+
+       this.authService.getUserInfo().subscribe(
       (data: UserInfoReponse) => {
-        // Handle successful response here
         this.userInfo = data;
         console.log('User Info:', this.userInfo);
       },
       (error) => {
-        // Handle error response here
         console.error('Error fetching user info:', error);
       }
     );
+    }
+    
 
 
     this.route.params.subscribe(params => {
@@ -67,7 +70,7 @@ export class MovieDetailComponent {
     (data) => {
       this.movieDetails = {
           name: data.title,
-          thumbnail: `https://image.tmdb.org/t/p/w780${data.backdrop_path}`,
+          thumbnail: `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`,
           releaseDate: data.release_date,
           genre: data.genre_ids,
         id: data.id,
@@ -133,6 +136,22 @@ export class MovieDetailComponent {
       response => {
         console.log("post request successful", response);
         this.checkoutForm.reset();
+
+        this.apiService.getCommentMovie(this.movieId).subscribe(
+    (data) => {
+      this.movieComments = data.map((comment: any) => ({
+        firstName: comment.firstName,
+        lastName:comment.lastName,
+        email: comment.email,
+        comment : comment.comment,
+      }));
+         
+         this.numberOfComments = this.movieComments.length;
+    },
+    (error) => {
+      console.error("Error fetching action movies", error);
+    }
+  );
       },
       error => {
         console.error("Error in post request", error);

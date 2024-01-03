@@ -36,7 +36,8 @@ export class HomeComponent {
       this.actionMovies = data.results.map((movie: any) => ({
         name: movie.title,
         thumbnail: `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`,
-        id : movie.id,
+        id: movie.id,
+        image: movie.backdrop_path,
       }));
     },
     (error) => {
@@ -51,7 +52,9 @@ export class HomeComponent {
       this.romanceMovies = data.results.map((movie: any) => ({
         name: movie.title,
         thumbnail: `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`,
-        id : movie.id,
+        id: movie.id,
+                image: movie.backdrop_path,
+
       }));
     },
     (error) => {
@@ -67,7 +70,9 @@ export class HomeComponent {
       this.scienceFictionMovies = data.results.map((movie: any) => ({
         name: movie.title,
         thumbnail: `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`,
-        id : movie.id,
+        id: movie.id,
+                image: movie.backdrop_path,
+
       }));
     },
     (error) => {
@@ -81,7 +86,9 @@ export class HomeComponent {
       this.crimeMovies = data.results.map((movie: any) => ({
         name: movie.title,
         thumbnail: `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`,
-        id : movie.id,
+        id: movie.id,
+                image: movie.backdrop_path,
+
       }));
     },
     (error) => {
@@ -95,7 +102,9 @@ export class HomeComponent {
       this.comedyMovies = data.results.map((movie: any) => ({
         name: movie.title,
         thumbnail: `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`,
-        id : movie.id,
+        id: movie.id,
+                image: movie.backdrop_path,
+
       }));
     },
     (error) => {
@@ -109,7 +118,9 @@ export class HomeComponent {
       this.historyMovies = data.results.map((movie: any) => ({
         name: movie.title,
         thumbnail: `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`,
-        id : movie.id,
+        id: movie.id,
+                image: movie.backdrop_path,
+
       }));
     },
     (error) => {
